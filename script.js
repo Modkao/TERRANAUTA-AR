@@ -109,7 +109,6 @@ function iniciarJuego(){
     // cambiar estado
     juegoIniciado = true;
 
-
     // cambiar imagen
     terranautaIdle.src =
     "mcapuntando.png";
@@ -141,13 +140,12 @@ function iniciarJuego(){
 // INTERACCION
 // ======================
 
-function interactuar(objeto, imagen){
+function interactuar(evento, objeto, imagen){
 
 
     if(juegoIniciado !== "activo"){
 
     return;
-
 }
 
     // desaparecer basura anterior
@@ -161,15 +159,15 @@ function interactuar(objeto, imagen){
 
     }
 
-
-
     basuraAnterior = objeto;
+
+    objeto.style.display = "none"
 
 
 
     basuraRestante--;
 
-
+botella
 
     // esconder terranauta arriba
     terranautaIdle.style.display =
@@ -178,24 +176,15 @@ function interactuar(objeto, imagen){
 
 
     // mostrar terranauta accion
-    terranautaAction.style.display =
-    "block";
+   terranautaAction.style.display = "block";
 
-    terranautaAction.src = imagen;
+terranautaAction.src = imagen;
 
+terranautaAction.style.left =
+(evento.clientX - 180) + "px";
 
-
-    // mover terranauta
-    terranautaAction.style.left =
-    objeto.offsetLeft + "px";
-
-
-
-    terranautaAction.style.top =
-    (objeto.offsetTop - 150) + "px";
-
-
-
+terranautaAction.style.top =
+(evento.clientY - 200) + "px";
 
     // FINAL
 
@@ -249,15 +238,21 @@ function interactuar(objeto, imagen){
 // EVENTOS
 // ======================
 
+// ======================
+// EVENTOS
+// ======================
+
 botella.addEventListener(
 
     "click",
 
-    ()=>{
+    (evento)=>{
 
-        interactuar(
+       interactuar(
+            evento,
             botella,
-        "mcpapel.png);
+            "mcbotella.png"
+        );
 
     }
 
@@ -270,9 +265,13 @@ bolsa.addEventListener(
 
     "click",
 
-    ()=>{
+    (evento)=>{
 
-        interactuar(bolsa);
+        interactuar(
+            evento,
+            bolsa,
+            "mcbolsas.png"
+        );
 
     }
 
@@ -285,9 +284,13 @@ lata.addEventListener(
 
     "click",
 
-    ()=>{
+    (evento)=>{
 
-        interactuar(lata);
+        interactuar(
+            evento,
+            lata,
+            "mclata.png"
+        );
 
     }
 
@@ -300,9 +303,13 @@ papel.addEventListener(
 
     "click",
 
-    ()=>{
+    (evento)=>{
 
-        interactuar(papel);
+        interactuar(
+            evento,
+            papel,
+            "mcpapel.png"
+        );
 
     }
 
