@@ -208,7 +208,7 @@ terranautaAction.style.transform =
 
 
             terranautaIdle.src =
-            "terranauta.png";
+            "mcfinal.png";
 
 
 
@@ -226,7 +226,7 @@ terranautaAction.style.transform =
             "translate(-50%, -50%)";
 
 
-        },2000);
+        },4000);
 
     }
 
