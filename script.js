@@ -181,11 +181,13 @@ botella
 terranautaAction.src = imagen;
 
 terranautaAction.style.left =
-(evento.clientX - 180) + "px";
+evento.clientX + "px";
 
 terranautaAction.style.top =
-(evento.clientY - 200) + "px";
+evento.clientY + "px";
 
+terranautaAction.style.transform =
+"translate(-50%, -50%)";
     // FINAL
 
     if(basuraRestante <= 0){
