@@ -141,7 +141,7 @@ function iniciarJuego(){
 // INTERACCION
 // ======================
 
-function interactuar(objeto){
+function interactuar(objeto, imagen){
 
 
     if(juegoIniciado !== "activo"){
@@ -180,6 +180,8 @@ function interactuar(objeto){
     // mostrar terranauta accion
     terranautaAction.style.display =
     "block";
+
+    terranautaAction.src = imagen;
 
 
 
@@ -253,7 +255,9 @@ botella.addEventListener(
 
     ()=>{
 
-        interactuar(botella);
+        interactuar(
+            botella,
+        "mcpapel.png);
 
     }
 
