@@ -58,7 +58,9 @@ body{
 
     position:absolute;
 
-    width: 45vw;
+    width: 65vw;
+
+    max-width:700px;
 
     top:0%;
 
@@ -78,8 +80,8 @@ body{
 
     position:absolute;
 
-    width:45vw;
-    max-width:260px;
+    width:65vw;
+    max-width:700px;
 
     display:none;
 
@@ -98,8 +100,8 @@ body{
 
     position:absolute;
 
-    width:16vw;
-max-width:90px;
+    width:18vw;
+max-width:140px;
 min-width:55px;
 
     z-index:5;
